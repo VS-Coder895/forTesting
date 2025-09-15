@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.formTitle = new System.Windows.Forms.Label();
             this.toolTipUserName = new System.Windows.Forms.ToolTip(this.components);
+            this.txtBoxUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.toolTipPassword = new System.Windows.Forms.ToolTip(this.components);
+            this.txtBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnfrmAbout = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.txtBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtBoxUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.picBoxLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -72,6 +72,31 @@
             this.toolTipUserName.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipUserName.ToolTipTitle = "Email Policies";
             // 
+            // txtBoxUserName
+            // 
+            this.txtBoxUserName.BackColor = System.Drawing.Color.Transparent;
+            this.txtBoxUserName.BorderRadius = 8;
+            this.txtBoxUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxUserName.DefaultText = "";
+            this.txtBoxUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBoxUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBoxUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBoxUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBoxUserName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.txtBoxUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBoxUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxUserName.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtBoxUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBoxUserName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtBoxUserName.IconLeft")));
+            this.txtBoxUserName.Location = new System.Drawing.Point(75, 43);
+            this.txtBoxUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxUserName.Name = "txtBoxUserName";
+            this.txtBoxUserName.PlaceholderText = "Enter UserName";
+            this.txtBoxUserName.SelectedText = "";
+            this.txtBoxUserName.Size = new System.Drawing.Size(460, 50);
+            this.txtBoxUserName.TabIndex = 1;
+            this.toolTipUserName.SetToolTip(this.txtBoxUserName, "Enter here your user name, please!.");
+            // 
             // toolTipPassword
             // 
             this.toolTipPassword.AutoPopDelay = 5500;
@@ -80,59 +105,6 @@
             this.toolTipPassword.ReshowDelay = 110;
             this.toolTipPassword.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipPassword.ToolTipTitle = "Password Policies";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderRadius = 12;
-            this.guna2Panel1.Controls.Add(this.btnfrmAbout);
-            this.guna2Panel1.Controls.Add(this.btnLogin);
-            this.guna2Panel1.Controls.Add(this.txtBoxPassword);
-            this.guna2Panel1.Controls.Add(this.txtBoxUserName);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(44)))), ((int)(((byte)(66)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(379, 197);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(599, 337);
-            this.guna2Panel1.TabIndex = 5;
-            // 
-            // btnfrmAbout
-            // 
-            this.btnfrmAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.btnfrmAbout.BorderRadius = 12;
-            this.btnfrmAbout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnfrmAbout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnfrmAbout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnfrmAbout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnfrmAbout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btnfrmAbout.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfrmAbout.ForeColor = System.Drawing.Color.White;
-            this.btnfrmAbout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.btnfrmAbout.Location = new System.Drawing.Point(417, 212);
-            this.btnfrmAbout.Name = "btnfrmAbout";
-            this.btnfrmAbout.Size = new System.Drawing.Size(118, 35);
-            this.btnfrmAbout.TabIndex = 4;
-            this.btnfrmAbout.Text = "About us";
-            this.btnfrmAbout.Click += new System.EventHandler(this.btnfrmAbout_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BorderRadius = 8;
-            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(71)))), ((int)(((byte)(195)))));
-            this.btnLogin.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
-            this.btnLogin.Location = new System.Drawing.Point(75, 212);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(118, 35);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtBoxPassword
             // 
@@ -160,30 +132,58 @@
             this.toolTipPassword.SetToolTip(this.txtBoxPassword, "Enter here your password!.");
             this.txtBoxPassword.UseSystemPasswordChar = true;
             // 
-            // txtBoxUserName
+            // guna2Panel1
             // 
-            this.txtBoxUserName.BackColor = System.Drawing.Color.Transparent;
-            this.txtBoxUserName.BorderRadius = 8;
-            this.txtBoxUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBoxUserName.DefaultText = "";
-            this.txtBoxUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBoxUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBoxUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBoxUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBoxUserName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.txtBoxUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxUserName.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtBoxUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxUserName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtBoxUserName.IconLeft")));
-            this.txtBoxUserName.Location = new System.Drawing.Point(75, 43);
-            this.txtBoxUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtBoxUserName.Name = "txtBoxUserName";
-            this.txtBoxUserName.PlaceholderText = "Enter UserName";
-            this.txtBoxUserName.SelectedText = "";
-            this.txtBoxUserName.Size = new System.Drawing.Size(460, 50);
-            this.txtBoxUserName.TabIndex = 1;
-            this.toolTipUserName.SetToolTip(this.txtBoxUserName, "Enter here your user name, please!.");
+            this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Controls.Add(this.btnfrmAbout);
+            this.guna2Panel1.Controls.Add(this.btnLogin);
+            this.guna2Panel1.Controls.Add(this.txtBoxPassword);
+            this.guna2Panel1.Controls.Add(this.txtBoxUserName);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(44)))), ((int)(((byte)(66)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(379, 197);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(599, 337);
+            this.guna2Panel1.TabIndex = 5;
+            // 
+            // btnfrmAbout
+            // 
+            this.btnfrmAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.btnfrmAbout.BorderRadius = 12;
+            this.btnfrmAbout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnfrmAbout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnfrmAbout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnfrmAbout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnfrmAbout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btnfrmAbout.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfrmAbout.ForeColor = System.Drawing.Color.IndianRed;
+            this.btnfrmAbout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.btnfrmAbout.Location = new System.Drawing.Point(417, 212);
+            this.btnfrmAbout.Name = "btnfrmAbout";
+            this.btnfrmAbout.Size = new System.Drawing.Size(118, 35);
+            this.btnfrmAbout.TabIndex = 4;
+            this.btnfrmAbout.Text = "About us";
+            this.btnfrmAbout.Click += new System.EventHandler(this.btnfrmAbout_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BorderRadius = 8;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(71)))), ((int)(((byte)(195)))));
+            this.btnLogin.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(68)))), ((int)(((byte)(255)))));
+            this.btnLogin.Location = new System.Drawing.Point(75, 212);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(118, 35);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // picBoxLogin
             // 
