@@ -156,7 +156,7 @@
             this.btnfrmAbout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnfrmAbout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
             this.btnfrmAbout.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfrmAbout.ForeColor = System.Drawing.Color.IndianRed;
+            this.btnfrmAbout.ForeColor = System.Drawing.SystemColors.Info;
             this.btnfrmAbout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.btnfrmAbout.Location = new System.Drawing.Point(417, 212);
             this.btnfrmAbout.Name = "btnfrmAbout";
