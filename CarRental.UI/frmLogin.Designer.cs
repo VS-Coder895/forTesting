@@ -59,9 +59,9 @@
             this.formTitle.Location = new System.Drawing.Point(533, 133);
             this.formTitle.Margin = new System.Windows.Forms.Padding(0);
             this.formTitle.Name = "formTitle";
-            this.formTitle.Size = new System.Drawing.Size(294, 41);
+            this.formTitle.Size = new System.Drawing.Size(230, 41);
             this.formTitle.TabIndex = 0;
-            this.formTitle.Text = "Car Rental App";
+            this.formTitle.Text = "Hello World";
             // 
             // toolTipUserName
             // 
