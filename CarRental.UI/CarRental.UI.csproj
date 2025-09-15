@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACCF0DF0-E359-4553-B56C-1AA79427E02A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarRental.UI</RootNamespace>
+    <AssemblyName>CarRental.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\PC\Downloads\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CarRentalDataSet.cs">
+      <DependentUpon>CarRentalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarRentalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveUser.cs" />
+    <Compile Include="conAutoFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="conAutoFilter.Designer.cs">
+      <DependentUpon>conAutoFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlUserInfo.Designer.cs">
+      <DependentUpon>ctrlUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\conAddEditInitialPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\conAddEditInitialPayment.Designer.cs">
+      <DependentUpon>conAddEditInitialPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\conVehicleInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\conVehicleInfo.Designer.cs">
+      <DependentUpon>conVehicleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsForms\frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentsForms\frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\frmAddEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\frmAddEditCustomer.Designer.cs">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\frmAddEditCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmAddEditCar.Designer.cs">
+      <DependentUpon>frmAddEditCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarDeatils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarDeatils.Designer.cs">
+      <DependentUpon>frmCarDeatils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCars.Designer.cs">
+      <DependentUpon>frmCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\frmCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\frmCustomerDetails.Designer.cs">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditCarRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditCarRental.Designer.cs">
+      <DependentUpon>frmAddEditCarRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarRentalDeatils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarRentalDeatils.Designer.cs">
+      <DependentUpon>frmCarRentalDeatils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicleRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicleRental.Designer.cs">
+      <DependentUpon>frmVehicleRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmLogin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsForms\frmPaymentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentsForms\frmPaymentDetails.Designer.cs">
+      <DependentUpon>frmPaymentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsForms\frmAddInitialPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentsForms\frmAddInitialPayment.Designer.cs">
+      <DependentUpon>frmAddInitialPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\conAddEditRental.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\conAddEditRental.Designer.cs">
+      <DependentUpon>conAddEditRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnsForms\frmReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnsForms\frmReturn.Designer.cs">
+      <DependentUpon>frmReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnsForms\frmReturnDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnsForms\frmReturnDetails.Designer.cs">
+      <DependentUpon>frmReturnDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnsForms\frmUpdateReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnsForms\frmUpdateReturn.Designer.cs">
+      <DependentUpon>frmUpdateReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\conAddRental.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\conAddRental.Designer.cs">
+      <DependentUpon>conAddRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\conCustomerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\conCustomerInfo.Designer.cs">
+      <DependentUpon>conCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\conFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\conFilter.Designer.cs">
+      <DependentUpon>conFilter.cs</DependentUpon>
+    </Compile>
+    <!-- <Compile Include="VehicleRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleRental.Designer.cs">
+      <DependentUpon>VehicleRental.cs</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile> -->
+    <Compile Include="frmRentalPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRentalPayment.Designer.cs">
+      <DependentUpon>frmRentalPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsForms\frmUpdatePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentsForms\frmUpdatePayment.Designer.cs">
+      <DependentUpon>frmUpdatePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddEditUser.Designer.cs">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserDetailes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserDetailes.Designer.cs">
+      <DependentUpon>frmUserDetailes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="conAutoFilter.resx">
+      <DependentUpon>conAutoFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlUserInfo.resx">
+      <DependentUpon>ctrlUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\conAddEditInitialPayment.resx">
+      <DependentUpon>conAddEditInitialPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\conVehicleInfo.resx">
+      <DependentUpon>conVehicleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\conFilter.resx">
+      <DependentUpon>conFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\frmAddEditCustomer.resx">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\frmCustomerDetails.resx">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmAddEditCar.resx">
+      <DependentUpon>frmAddEditCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarDeatils.resx">
+      <DependentUpon>frmCarDeatils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCars.resx">
+      <DependentUpon>frmCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLogin1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsForms\frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsForms\frmAddInitialPayment.resx">
+      <DependentUpon>frmAddInitialPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\conAddEditRental.resx">
+      <DependentUpon>conAddEditRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnsForms\frmReturn.resx">
+      <DependentUpon>frmReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnsForms\frmReturnDetails.resx">
+      <DependentUpon>frmReturnDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnsForms\frmUpdateReturn.resx">
+      <DependentUpon>frmUpdateReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\conAddRental.resx">
+      <DependentUpon>conAddRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <!-- <EmbeddedResource Include="VehicleRental.resx">
+      <DependentUpon>VehicleRental.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VehicleRental.Designer.cs</LastGenOutput>
+    </EmbeddedResource> -->
+    <EmbeddedResource Include="frmVehicleRental.resx">
+      <DependentUpon>frmVehicleRental.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsForms\frmPaymentDetails.resx">
+      <DependentUpon>frmPaymentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\conCustomerInfo.resx">
+      <DependentUpon>conCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRentalPayment.resx">
+      <DependentUpon>frmRentalPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditCarRental.resx">
+      <DependentUpon>frmAddEditCarRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarRentalDeatils.resx">
+      <DependentUpon>frmCarRentalDeatils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsForms\frmUpdatePayment.resx">
+      <DependentUpon>frmUpdatePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddEditUser.resx">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserDetailes.resx">
+      <DependentUpon>frmUserDetailes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CarRentalDataSet.xsc">
+      <DependentUpon>CarRentalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalDataSet.xss">
+      <DependentUpon>CarRentalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Rental\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\settings.png" />
+    <None Include="Images\diabetes.png" />
+    <None Include="Images\fleet.png" />
+    <None Include="Images\team.png" />
+    <None Include="CarDeatilsImages\car %281%29.png" />
+    <None Include="CarDeatilsImages\car.png" />
+    <None Include="CarDeatilsImages\car-manufacturing.png" />
+    <None Include="CarDeatilsImages\download-speed.png" />
+    <None Include="CarDeatilsImages\license-plate.png" />
+    <None Include="CarDeatilsImages\color-wheel.png" />
+    <None Include="CarDeatilsImages\gas-station.png" />
+    <None Include="CarDeatilsImages\life-insurance.png" />
+    <None Include="CarDeatilsImages\price-tag.png" />
+    <None Include="CarDeatilsImages\engineering.png" />
+    <None Include="CarDeatilsImages\gas-pump.png" />
+    <None Include="CarDeatilsImages\gear-shift.png" />
+    <None Include="CarDeatilsImages\seats.png" />
+    <None Include="CarDeatilsImages\status.png" />
+    <None Include="CarDeatilsImages\vehicles.png" />
+    <None Include="CarDeatilsImages\search.png" />
+    <None Include="CarDeatilsImages\calendar.png" />
+    <None Include="Icons\LoginIcons\LoginImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarRental.Business\CarRental.Business.csproj">
+      <Project>{360be04c-701f-4da6-b7b7-96cdd3ee52dc}</Project>
+      <Name>CarRental.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\carDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\new-features.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\customer-review.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\gps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarDeatilsImages\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\newbie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\thinking.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
